@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap');
+
+@font-face {
+  font-family: 'Bau Asem';
+  src: url('./assets/fonts/BauAsem.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply globally */
+body {
+  font-family: 'Bau Asem', 'Montagu Slab', sans-serif;
+}
+
+/* Optional: Use class for custom use */
+.newclass {
+  font-family: 'Bau Asem', sans-serif;
+}

@@ -1,0 +1,462 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Über uns",
+    "courses": "Kurse",
+    "blogs": "Blogs",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "academy": "Butterfly Garden",
+    "title": "In Partnership With Die Maven Academy",
+    "tagline": "Wo kleine Flügel fliegen lernen!",
+    "description": "Wir schaffen einen sicheren, fröhlichen und inspirierenden Lernraum, in dem junge Köpfe erblühen.",
+    "quickLinks": "Schnellzugriff",
+    "home": "Startseite",
+    "about": "Über uns",
+    "blogs": "Blogs",
+    "contact": "Kontakt",
+    "getInTouch": "Kontaktieren Sie uns",
+    "mobile": "Kontakt",
+    "email": "E-Mail",
+    "address": "Unser Standort",
+    "addressDetails": "Vijaya Samani Court, Zürich"
+  },
+  "ourPreschool": {
+    "title": "Unser Vorschul",
+    "t1":"(Alter 3-6)",
+    "description": "Butterfly Garden ist ein zweisprachiger Kindergarten für kleine Kinder im Alter von 3 bis 6 Jahren. Mit der Montessori-Methode legen wir den Fokus auf praktisches und erfahrungsbasiertes Lernen. So können die Kinder in ihrem eigenen Tempo lernen und sich entwickeln – genau wie sich eine Raupe in einen bunten Schmetterling verwandelt. Wir glauben, dass jedes Kind einzigartig ist und die Chance verdient, in einem multikulturellen Umfeld zu gedeihen.",
+    "title1": "Nachschulisches Aktivitätszentrum",
+    "t":"(Alter 3-12)",
+    "desc": "Butterfly Garden ist ein Nachmittagsbetreuungszentrum, das verschiedene Aktivitäten für kleine und ältere Kinder im Alter von 3 bis 12 Jahren anbietet. Wir glauben, dass jedes Kind einzigartige Interessen und Fähigkeiten hat. Wir bieten den Raum und die Ermutigung, die Kinder benötigen, um in einer multikulturellen Welt zu wachsen, und ermöglichen ihnen, sich auf ihre eigene Weise auszudrücken. Im Butterfly Garden können Kinder ihre Interessen entdecken und neue Fähigkeiten erlernen, die in der heutigen Zeit von Bedeutung sind.",
+    "title2": "Unser Gründer und Schulleiter",
+    "T":"Vijaya Srinath",
+    "description2": " ist eine leidenschaftliche Lehrerin mit über 10 Jahren Unterrichtserfahrung und einem Hintergrund in der frühkindlichen Bildung. Sie besitzt ein Diplom in der Lehrerfortbildung, TEFL (Teaching English as a Foreign Language) aus Kanada, CPD (Continuing Professional Development) aus dem Vereinigten Königreich und ist zudem eine zertifizierte Frühpädagogin (UK). Sie verwendet einfache, aber moderne Lehrmethoden, um die Talente und Fähigkeiten der Kinder zu erkennen und sie individuell zu fördern. Außerdem unterstützt sie die persönliche Entwicklung der Kinder und ermöglicht ihnen, sich in ihrem eigenen Tempo zu entfalten. Wenn Vijaya Srinath nicht unterrichtet, widmet sie sich mit großer Leidenschaft ihrem Food-Blog „My Passionate Kitchen“, in dem sie neue Rezepte entdeckt und ausprobiert.",
+    "description3":"Kontaktieren Sie Vijaya Srinath für weitere Details.",
+    "description4":"Whatsapp: 0765025963"
+  },
+  "languageIntegration": {
+  "title": "Sprachintegration nach Altersgruppe",
+  "ageGroups": [
+    {
+      "ageRange": "3-5 Jahre",
+      "activities": [
+        "Spielbasiertes Lernen",
+        "Lieder",
+        "Motorische Fähigkeiten",
+        "Bilderbücher"
+      ]
+    },
+    {
+      "ageRange": "6-8 Jahre",
+      "activities": [
+        "Zweisprachiges Erzählen",
+        "Geführtes Lesen",
+        "Rollenspiele",
+        "Schreiben"
+      ]
+    },
+    {
+      "ageRange": "9-12 Jahre",
+      "activities": [
+        "Präsentationen",
+        "Gruppendiskussionen",
+        "Projektbasiertes Lernen"
+      ]
+    }
+  ]
+},
+
+  "features": {
+    "headingMain": "Wir sind Kindergarten",
+    "headingSub": "Kindheit ist unsere Leidenschaft",
+    "homeLike": "Heimähnliche Umgebung",
+    "safety": "Sicherheit und Schutz",
+    "educators": "Qualifizierte Lehrkräfte",
+    "play": "Spielend lernen",
+    "learnMore": "Mehr erfahren"
+  },
+  "heading": "Aufnahmeverfahren",
+  "steps": [
+    {
+      "title": "Anfrage & Schulbesichtigung",
+      "desc": "Besuchen Sie unseren Campus oder vereinbaren Sie einen Termin."
+    },
+    {
+      "title": "Anmeldeformular",
+      "desc": "Online oder an unserer Rezeption erhältlich."
+    },
+    {
+      "title": "Kennenlerngespräch",
+      "desc": "Treffen Sie unsere Lehrkräfte zu einem freundlichen Gespräch."
+    },
+    {
+      "title": "Bestätigung & Willkommenspaket",
+      "desc": "Enthält Uniform, Schreibwaren und Schulkalender."
+    }
+  ],
+  "eligibility": {
+    "title": "Zulassungsvoraussetzungen",
+    "desc": "Kinder im Alter von 3-6 Jahren für Pre-KG, LKG und UKG."
+  },
+  "hero": {
+    "headingMain": "Wir sind Kindergarten",
+    "headingSub": "Kindheit ist unsere Leidenschaft",
+    "headline": "Willkommen im",
+    "title": "Butterfly Garden",
+   "title1": "Ihr Kind",
+"T": "Das erste große",
+"T1": "Abenteuer!",
+    "subtext": "Im Schmetterlingsgarten schaffen wir einen magischen Ort, an dem Kinder lernen, entdecken und zu selbstbewussten, glücklichen Lernenden heranwachsen. Unsere warme und sichere Umgebung sorgt dafür, dass Ihr Kind jeden Schritt seiner Lernreise genießt.",
+    "ctaEnroll": "Jetzt  einschreiben",
+    "ctaTour": "Schulbesichtigung buchen"
+  },
+  "hero1":{
+      "heading": "Termin merken",
+      "title": "Wir freuen uns,",
+      "subtitle": "die Einführung",
+         "t5":" Butterfly",
+      "t":"Garden ",
+      "t6": "Einführung im Oktober 2025",
+      "button1": "Termin merken"
+    },
+  "whyChooseSection": {
+    "heading": "Unsere <1> Programme</1>",
+    "reasons": [
+      {
+        "title": "Vorschule (3-6 Jahre)",
+        "desc": "Montessori-inspirierte, praxisorientierte Lernmethoden für eine starke Basis."
+      },
+      {
+        "title": "Nachmittagsbetreuung (3-12 Jahre)",
+        "desc": "Kreative Aktivitäten, Sprachen, Sport und Lebenskompetenzen in einer fröhlichen Umgebung."
+      },
+      {
+        "title": "Schulzeiten",
+        "desc": "Montag - Freitag: 8:30 - 12:30 Uhr"
+      }
+    ]
+  },
+  "gymi": {
+    "heading": "UNSERE KURSE",
+    "title1": "Lang- & Kurzgymi Prüfungsvorbereitung",
+    "subjects1": "Fächer: Deutsch & Mathematik",
+    "title2": "Probezeit-Training nach der Gymi-Prüfung",
+    "subjects2": "Fächer: Mathematik, Englisch, Deutsch, Französisch",
+    "timings": "Zeiten",
+    "mode": "(Präsenz- und Online-Unterricht)",
+    "timing1": "Deutsch: Freitags, 16:00-18:00, 18:30-20:00",
+    "timing2": "Mathematik: Samstags, 10:00-12:00",
+    "timing3": "Mathematik: Sonntags, 10:00-12:00",
+    "timingNote": "Kann mit dem Lehrer nach gegenseitiger Absprache vereinbart werden.",
+    "price": "Preis",
+    "price1": "3600 CHF für Gruppenunterricht (August-Februar Paket)",
+    "price2": "50 CHF pro Stunde für Einzelunterricht",
+    "price3": "50 CHF pro Stunde für Einzelunterricht",
+    "price4": "180 CHF pro Monat für Gruppenunterricht"
+  },
+  "testimonials": {
+    "heading": "Erfahrungsberichte / Erfolgsgeschichten",
+    "testimonial1": {
+      "name": "Markus L, Elternteil, Zürich",
+      "quote": "Der Gymi-Vorbereitungskurs bei der Maven Academy war äußerst hilfreich. Mein Sohn fühlte sich während des gesamten Prozesses unterstützt und hat die Prüfung mit Selbstvertrauen bestanden."
+    },
+    "testimonial2": {
+      "name": "Elena S, Elternteil, Zug",
+      "quote": "Wir haben unsere Tochter in das Englischprogramm bei Maven eingeschrieben und sehen große Fortschritte."
+    },
+    "testimonial3": {
+      "name": "Daniel M, Elternteil, Winterthur",
+      "quote": "Die Programmierkurse bei Maven haben bei meinem 10-jährigen Sohn ein echtes Interesse an Technologie geweckt. Er freut sich auf jede Sitzung."
+    },
+    "testimonial4": {
+      "name": "Tobias J, Elternteil, Bern",
+      "quote": "Die flexible Mischung aus Präsenz- und Onlineunterricht erleichtert uns die Planung erheblich. Wir schätzen die hochwertige Bildung bei Maven."
+    },
+    "testimonial5": {
+      "name": "Caroline W, Elternteil, Basel",
+      "quote": "Mein Sohn war früher schüchtern beim Sprechen vor anderen. Nach ein paar Monaten im Rhetorikprogramm von Maven ist er selbstbewusster und ausdrucksstärker."
+    },
+    "testimonial6": {
+      "name": "Priya R, Elternteil, Lausanne",
+      "quote": "Ich war positiv überrascht, wie sehr meine Tochter die Yogastunden genießt. Sie helfen ihr, Stress zu bewältigen und während der Schulzeit im Gleichgewicht zu bleiben."
+    },
+    "testimonial7": {
+      "name": "Isabelle G, Elternteil, Zürich",
+      "quote": "Die Maven Academy lehrt nicht nur Fächer - sie fördern Selbstvertrauen, Neugier und Kommunikation. Genau die Art von Bildung, die ich mir für meine Kinder wünsche."
+    },
+    "testimonial8": {
+      "name": "Nadia F, Elternteil, Luzern",
+      "quote": "Schon ab der ersten Stunde fühlten wir uns willkommen und unterstützt. Das Team bei Maven ist leidenschaftlich, professionell und kümmert sich wirklich um die Fortschritte jedes Kindes."
+    }
+  },
+  "about": {
+    "title": "Über uns",
+    "tagline": "Butterfly Garden ist eine bilingual Schule für Kinder im Alter von 3 bis 12 Jahren. Jedes Kind verdient die Chance, sich wie ein Schmetterling zu entwickeln, eigene Interessen zu entdecken und in einer multikulturellen Welt zu wachsen. Deshalb basiert sich unsere Schule nach der Montessori-Methode, die den Fokus auf selbst-entdeckendes und praxisorientiertes Lernen setzt. Wir bieten Unterricht auf Englisch und Deutsch mit einer breiten, vielfältigen Fächerauswahl an."
+  },
+    "aboutSection": {
+    "label": "Unser Ansatz",
+    "points": [
+      {
+        "id": "I",
+        "title": "Altersgerechtes Lernen",
+        "text": "Kinder im Alter von 3 bis 5 Jahren lernen am besten durch Lieder, Bilderbücher, einfachen Wortschatzaufbau und spielerische Aktivitäten. Zwischen 6 und 8 Jahren beschäftigen sie sich zunehmend mit dem Erzählen von Geschichten, erstem Lesen und Schreiben sowie Rollenspielen. Im Alter von 9 bis 12 Jahren liegt der Fokus auf Aufsätzen, Projekten und Gruppendiskussionen, um kritisches Denken und Teamarbeit zu fördern."    },
+      {
+        "id": "II",
+        "title": "Themenbasiertes Lernen",
+        "text": "Unsere Gemeinschaft, Weltall & darüber hinaus, Grüne Erde"
+      },
+      {
+        "id": "III",
+        "title": "Veranstaltungen",
+        "text": "Erzählwoche"
+      }
+     
+    ]
+  },
+  "syllabusSection": {
+    "title": "Unser Lehrplanrahmen",
+    "description": "Ein spielerischer und ganzheitlicher Ansatz, der Kindern hilft, durch Spaß und Entdeckung zu lernen.",
+    "cards": [
+      {
+        "id": "lang",
+        "title": "Sprachen",
+        "text": "Englisch, Deutsch, Französisch",
+        "icon": "📚",
+        "image": "/kid.webp"
+      },
+      {
+        "id": "math",
+        "title": "Mathematik",
+        "text": "Spiele & praxisnahes Lernen",
+        "icon": "🔢",
+        "image": "/images/syllabus/maths.png"
+      },
+      {
+        "id": "science",
+        "title": "Wissenschaft & Entdeckung",
+        "text": "Spaßige Experimente und Erkundungen",
+        "icon": "🔬",
+        "image": "/images/syllabus/science.png"
+      },
+      {
+        "id": "arts",
+        "title": "Kreative Künste",
+        "text": "Kunst, Musik, Theater und Basteln",
+        "icon": "🎨",
+        "image": "/images/syllabus/arts.png"
+      },
+      {
+        "id": "physical",
+        "title": "Körperliche Entwicklung",
+        "text": "Sport, Yoga, Achtsamkeit",
+        "icon": "⚽",
+        "image": "/images/syllabus/physical.png"
+      },
+      {
+        "id": "skills",
+        "title": "Lebenskompetenzen",
+        "text": "Teamarbeit, Kommunikation, Problemlösung",
+        "icon": "🤝",
+        "image": "/images/syllabus/lifeskills.png"
+      }
+    ]
+  },
+  "courses": {
+    "heading": "Unsere beliebten Kurse",
+    "gymi": "Gymi-Kurs",
+    "butterfly": "Butterfly Garden",
+    "bilingual": "Tagline, Zweisprachige Schule",
+    "comingSoon": "Demnächst verfügbar"
+  },
+  "classTimings": {
+    "heading": "Übersicht der Unterrichtszeiten",
+    "subject": "Fach",
+    "time": "Zeit",
+    "mode": "Modus",
+    "gymi": "Gymi-Kurs",
+    "butterfly": "Butterfly Garden",
+    "modeType": "Präsenz / Online",
+    "subjects": {
+      "german": "Deutsch",
+      "math": "Mathematik",
+      "langMath": "Sprachunterricht, Mathematik"
+    }
+  },
+  "butterflyAndGymi": {
+    "header": {
+      "title": "Butterfly Garden",
+      "subtitle": "Wachsende globale Köpfe"
+    },
+    "about": {
+      "title": "Wer sind wir?",
+      "description": "Butterfly Garden ist eine fürsorgliche zweisprachige Schule für Kinder im Alter von 3 bis 12 Jahren, die auf Entdeckung basiert. Wir verbinden globale akademische Standards mit immersivem, praxisorientiertem Lernen in Englisch, Deutsch, Französisch, Mathematik, Naturwissenschaften und mehr. Wie bei der Verwandlung eines Schmetterlings glauben wir, dass jedes Kind die Freiheit verdient, sich auszudrücken, zu entdecken und in einer multikulturellen Welt zu wachsen."
+    },
+    "syllabus": {
+      "title": "Lehrplan-Rahmen",
+      "items": [
+        {
+          "title1": "Sprachkunst",
+          "desc1": "Ausgewogene Alphabetisierung durch Geschichten, Phonetik, Schreiben und Leseverständnis."
+        },
+        {
+          "title2": "Mathematik",
+          "desc2": "Konzepte werden mit Materialien, Spielen und lebensnahen Anwendungen gelehrt."
+        },
+        {
+          "title3": "Wissenschaft & Entdeckung",
+          "desc3": "Naturstudien, Experimente und thematische Erkundungen."
+        },
+        {
+          "title4": "Allgemeinwissen",
+          "desc4": "Weltkulturen, Geografie und Geschichtsbewusstsein."
+        },
+        {
+          "title5": "Kreative Künste",
+          "desc5": "Kunst, Basteln, Musik, Theater und Ausdrucksbewegung."
+        },
+        {
+          "title6": "Lebenskompetenzen",
+          "desc6": "Emotionale Intelligenz, Kommunikation und Problemlösung."
+        }
+      ]
+    },
+    "languageIntegration": {
+      "title": "Sprachintegration nach Altersgruppe",
+      "age": "Alter",
+      "table": [
+        {
+          "age": "3-5 Jahre",
+          "focus": "Lieder, Wortschatz, Spiel, Bilderbücher und Motorik."
+        },
+        {
+          "age": "6-8 Jahre",
+          "focus": "Zweisprachiges Geschichtenerzählen, Lesen, Schreiben, Rollenspiele, betreutes Lesen"
+        },
+        {
+          "age": "9-12 Jahre",
+          "focus": "Aufsätze, Präsentationen, Projektarbeiten, Gruppendiskussionen"
+        }
+      ]
+    },
+    "gymiCourse": {
+      "title": "Gymi-Kurs von Maven",
+      "subtitle": "Denken, Lernen, Gedeihen",
+      "description": "Der Eintritt ins Gymnasium formt die Zukunft eines Schülers mit Chancen auf führende Universitäten in der Schweiz und im Ausland. Bei Maven bereiten wir Kinder mit personalisiertem Training auf die Lang- und Kurzgymi-Prüfungen vor, einschließlich Unterstützung während der Probezeit.",
+      "examTrainingTitle": "Lang- & Kurzgymi Prüfungsvorbereitung",
+      "examTrainingTable": [
+        {
+          "subject": "Deutsch",
+          "timings": "Freitags 16:00-18:00, 18:30-20:00",
+          "mode": "Präsenz & Online",
+          "fees": "3600 CHF (Gruppe), 50 CHF/Stunde (Einzelunterricht)"
+        },
+        {
+          "subject": "Mathematik",
+          "timings": "Samstags & Sonntags 10:00-12:00",
+          "mode": "Präsenz & Online",
+          "fees": "Wie oben"
+        }
+      ]
+    },
+    "probezeitTraining": {
+      "title": "Probezeit-Training",
+      "subjects": "Mathematik, Englisch, Deutsch, Französisch",
+      "fees": "50 CHF/Stunde (Einzelunterricht), 180 CHF/Monat (Gruppe)",
+      "timings": "Flexibel, basierend auf Koordination zwischen Eltern und Lehrer"
+    },
+    "tableHeaders": {
+      "subject": "Fach",
+      "timings": "Zeiten",
+      "mode": "Modus",
+      "fees": "Gebühren"
+    }
+  },
+  "blog": {
+    "blogsTitle": "BLOGS",
+    "readMore": "Mehr lesen",
+    "viewMore": "Mehr anzeigen",
+    "viewLess": "Weniger anzeigen",
+    "NoBlogFound": "Kein Blog gefunden",
+    "backBlogs": "Zurück zu Blogs",
+    "fallbackBlogs": {
+      "bilingualTitle": "Warum zweisprachige Bildung wichtig ist",
+      "bilingualContent": "Zweisprachige Bildung hilft Kindern, die Welt aus verschiedenen Perspektiven zu verstehen. Studien zeigen, dass sich die kognitive Entwicklung durch den Kontakt mit mehreren Sprachen verbessert.",
+      "creativeSpacesTitle": "Kreative Lernräume zu Hause",
+      "creativeSpacesContent": "Ein lernfreundliches Zuhause kann die Konzentration und Kreativität Ihres Kindes erheblich steigern.",
+      "learningGamesTitle": "Top 5 Lernspiele für Kinder",
+      "learningGamesContent": "Lernen durch Spielen ist effektiv. Hier sind fünf Spiele, die Kinder unterhalten und gleichzeitig wichtige Fähigkeiten vermitteln.",
+      "mathFunTitle": "Mathe spielerisch lernen für Vorschulkinder",
+      "mathFunContent": "Mathe muss nicht beängstigend sein. Nutzen Sie Spielzeug, Geschichten und Lieder, um grundlegende Konzepte zu vermitteln.",
+      "healthyHabitsTitle": "Gesunde Gewohnheiten für schlaue Kinder",
+      "healthyHabitsContent": "Gesunde Kinder lernen besser! Etablieren Sie Routinen für Körper und Geist.",
+      "emotionsTitle": "Die Gefühle Ihres Kindes verstehen",
+      "emotionsContent": "Emotionale Intelligenz ist ebenso wichtig wie akademisches Wissen. Helfen Sie Ihrem Kind, Emotionen zu benennen und zu steuern."
+    }
+  },
+  "contac": {
+    "contactTitle": "Kontaktieren Sie uns",
+    "line1": "Unser Aufnahmeprozess ist einfach, klar und wird vollständig von unserem Team unterstützt.",
+    "line2": "Treten Sie der Butterfly-Garten-Gemeinschaft bei und geben Sie Ihrem Kind den besten Start ins Lernen."
+  },
+  "contact": {
+    "contactTitle": "Kontaktieren Sie uns",
+    "contactSubtitle": "Wir würden uns freuen, von Ihnen zu hören! Bitte füllen Sie das Formular aus und unser Team wird sich in Kürze bei Ihnen melden.",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "button": "Jetzt senden"
+    },
+    "cardAddressTitle": "Unser Standort",
+    "cardAddressText": "2443 Oak Ridge Omaha, GA 45065",
+    "cardPhoneTitle": "Telefonnummer",
+    "cardPhoneText": "+41 76 502 5963",
+    "cardEmailTitle": "E-Mail-Adresse",
+    "cardEmailText": "srinathvijaya7@gmail.com"
+  },
+  "contact1": {
+    "contactTitle": "Kontaktieren Sie uns",
+    "getInTouchHeading": "Nehmen Sie Kontakt auf",
+    "getInTouchText": "Egal, ob Sie Fragen zu Kursen, Preisen oder anderen Themen haben – unser Team hilft Ihnen gerne weiter.",
+    "orbitFacebook": "Facebook",
+    "orbitInstagram": "Instagram",
+    "orbitEmail": "E-Mail",
+    "cardAddressTitle": "Unsere Adresse",
+    "cardAddressText": "GZ Oerlikon, VFK Kloten, GZ Heuried, GZ Leimbach",
+    "cardPhoneTitle": "Rufen Sie uns an",
+    "cardPhoneText": "+41 76 760 39 21",
+    "cardEmailTitle": "Schreiben Sie uns",
+    "cardEmailText": "mavenacademy.switzerland@gmail.com",
+    "formHeading": "Wir freuen uns, von Ihnen zu hören",
+    "formSuccess": "Ihre Nachricht wurde zur Vorbereitung des Versands erstellt!",
+    "formNameLabel": "Name",
+    "formNamePlaceholder": "Geben Sie Ihren Namen ein",
+    "formEmailLabel": "E-Mail",
+    "formEmailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein",
+    "formPhoneLabel": "Telefon",
+    "formPhonePlaceholder": "Geben Sie Ihre Telefonnummer ein",
+    "formSubjectLabel": "Betreff",
+    "formSubjectPlaceholder": "Geben Sie den Betreff ein",
+    "formMessageLabel": "Nachricht",
+    "formMessagePlaceholder": "Schreiben Sie Ihre Nachricht hier...",
+    "formSubmit": "Nachricht senden"
+  },
+  "coursescard": {
+    "projects": [
+      {
+        "title": "1. Gymi-Kurs - Denken, Lernen, Aufblühen!",
+        "description": "Die Gymnasium-Prüfung ist eine der wichtigsten und entscheidendsten Prüfungen im Schulleben eines Schülers. Der Eintritt in ein Gymnasium eröffnet zahlreiche Zukunftschancen, einschließlich der Möglichkeit, angesehene Universitäten in der Schweiz und im Ausland zu besuchen. Bei Maven sorgen wir mit individueller Betreuung in Einzel- und Gruppensettings für eine gründliche Vorbereitung und einen reibungslosen Start ins Gymnasium."
+      },
+      {
+        "title": "2. Butterfly Garden - Ein zweisprachiges Lernnest!",
+        "description": "Butterfly Garden ist eine fürsorgliche zweisprachige Schule für Kinder im Alter von 3 bis 12 Jahren, in der das Lernen auf Entdeckung basiert. Wir bieten ein immersives Umfeld in Englisch, Deutsch, Französisch, Mathematik, Naturwissenschaften, Allgemeinwissen, visuellem Lernen, Kunst und Handwerk sowie außerschulischen Aktivitäten - und verbinden globale Bildungsstandards mit praxisnaher Erkundung. Inspiriert von der Verwandlung eines Schmetterlings glauben wir, dass jedes Kind die Freiheit verdient zu lernen, sich auszudrücken und in einer mehrsprachigen, multikulturellen Welt zu wachsen."
+      },
+      {
+        "title": "3. Slogan, zweisprachige Schule - Die Entwicklung Ihrer Kinder fördern!",
+        "description": "Entdecken Sie die Welt der Kreativität und Selbstausdruck mit unseren Kunst- und Bastelkursen. Egal, ob Sie ein Anfänger sind, der ein neues Hobby entdecken möchte, ein angehender Künstler, der seine Fähigkeiten entwickeln will, oder einfach jemand, der gerne mit den Händen arbeitet - unsere Kurse bieten für jeden etwas. In unserem Studio kennt die Kreativität keine Grenzen - kommen Sie vorbei und lassen Sie Ihrer Fantasie freien Lauf!"
+      }
+    ]
+  }
+}
