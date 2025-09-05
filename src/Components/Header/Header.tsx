@@ -5,7 +5,7 @@ import "./Header.css";
 import { useTranslation } from "react-i18next";
 import de from "../../assets/language/de.svg";
 import en from "../../assets/language/en.svg";
-import pair from "../../assets/About/REC.jpg"
+
 const Header: React.FC = () => {
   const location = useLocation();
   const [menuStatus, setMenuStatus] = useState(false);
@@ -28,175 +28,155 @@ const Header: React.FC = () => {
         setScrolled(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isNoScrollEffect]);
 
   const navLinkClass =
-    "text-[20px] cursor-pointer font-bold underline-animation transition duration-300 ease-in-out relative after:content-[''] after:block after:h-[2px] after:w-0 hover:after:w-full after:bg-[#fcdb7c]  after:transition-all after:duration-300";
-  const textColor = "text-[#5ea308] hover:text-[#fcdb7c]";
+    "text-lg md:text-xl cursor-pointer font-bold underline-animation transition duration-300 ease-in-out relative after:content-[''] after:block after:h-[2px] after:w-0 hover:after:w-full after:bg-[#fcdb7c] after:transition-all after:duration-300";
+
+  const getLinkClass = (path: string) => {
+    const isActive = location.pathname === path;
+    return `${navLinkClass} ${isActive ? "text-[#fcdb7c]" : "text-[#5EA308] hover:text-[#fcdb7c]"
+      }`;
+  };
 
   return (
     <div>
-     <div
-style={{
-  background: location.pathname === "/"
-    ? "#FFFBDB"
-    : "rgba(255, 255, 255, 0.1)", // light transparent bg
-  backdropFilter: location.pathname === "/" ? "none" : "blur(10px)",
-}}
+      {/* Header Container */}
+      <div
+        style={{
+          background:
+            location.pathname === "/" ? "#FFFBDB" : "rgba(255, 255, 255, 0.1)",
+          backdropFilter: location.pathname === "/" ? "none" : "blur(10px)",
+        }}
+        className={`h-[70px] sm:h-[80px] md:h-[85px] fixed top-0 left-0 right-0 flex items-center justify-center border-b border-white/20 transition-colors duration-300 z-50 ${scrolled ? "shadow-md" : ""
+          }`}
+      >
+        <div className="w-full flex justify-between items-center px-4 md:px-8 lg:px-12">
+          {/* Logo */}
+          <Link to="/" onClick={() => setMenuStatus(false)}>
+            <img
+              src={logo}
+              alt="Logo"
+              className="h-12 sm:h-14 md:h-16 lg:h-20 transition-transform duration-300 hover:scale-105"
+            />
+          </Link>
 
+          {/* Desktop Nav */}
+          <div className="hidden lg:flex flex-1 justify-end items-center gap-x-10">
+            <Link to="/" className={getLinkClass("/")} onClick={() => setMenuStatus(false)}>
+              {t("nav.home")}
+            </Link>
+            <Link to="/about" className={getLinkClass("/about")} onClick={() => setMenuStatus(false)}>
+              {t("nav.about")}
+            </Link>
+            <Link to="/contact" className={getLinkClass("/contact")} onClick={() => setMenuStatus(false)}>
+              {t("nav.contact")}
+            </Link>
 
-  className={`h-[85px] text-[15px] fixed top-0 left-0 right-0 flex items-center justify-center backdrop-blur-md border-b border-white/20 transition-colors duration-300 z-40`}
->
-
-        <div
-          className={`w-full flex ${menuStatus ? "fixed z-50" : ""
-            } justify-center items-center h-full`}
-        >
-          <div className="w-[95%] flex justify-between items-center">
-            {/* Logo */}
-            <div className="flex justify-start" style={{fontFamily: "Bau Asem, sans-serif"}}>
-              <Link to="/" onClick={() => setMenuStatus(false)}>
-                <img
-                  src={logo}
-                  alt="Logo"
-                  className="h-14 sm:h-16 md:h-20 transition-transform duration-300 hover:scale-105"
-                />
-              </Link>
-            </div>
-            {/* Desktop Nav + Flags on Right */}
-            <div className="hidden lg:flex flex-1 justify-end items-center gap-x-10">
-              <Link
-                to="/"
-                className={`${navLinkClass} ${textColor}`}
-                onClick={() => {
-                  setMenuStatus(false);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
-                {t("nav.home")}
-              </Link>
-              <Link
-                to="/about"
-                className={`${navLinkClass} ${textColor}`}
-                onClick={() => {
-                  setMenuStatus(false);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
-                {t("nav.about")}
-              </Link>
-              <Link
-                to="/contact"
-                className={`${navLinkClass} ${textColor}`}
-                onClick={() => {
-                  setMenuStatus(false);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
-                {t("nav.contact")}
-              </Link>
-              {/* Language Flags */}
-              <div className="flex items-center gap-3 ml-6">
-                <button
-                  onClick={() => handleChangeLang("en")}
-                  className={`w-8 h-8 rounded-full overflow-hidden border-2 transition hover:scale-110 ${currentLang === "en" ? "border-blue-500" : "border-transparent"
-                    }`}
-                >
-                  <img src={en} alt="English" className="w-full h-full object-cover" />
-                </button>
-                <button
-                  onClick={() => handleChangeLang("de")}
-                  className={`w-8 h-8 rounded-full overflow-hidden border-2 transition hover:scale-110 ${currentLang === "de"
-                      ? "border-blue-500"
-                      : "border-transparent"
-                    }`}
-                >
-                  <img src={de} alt="Deutsch" className="w-full h-full object-cover" />
-                </button>
-              </div>
-            </div>
-
-            {/* Mobile Hamburger */}
-            <div className="flex lg:hidden justify-center items-center ml-6">
+            {/* Language Switcher (Desktop) */}
+            <div className="flex items-center gap-3 ml-6">
               <button
-                className={`relative cursor-pointer block self-center ${menuStatus
-                    ? "visible opacity-100 [&_span:nth-child(1)]:w-6 [&_span:nth-child(1)]:translate-y-0 [&_span:nth-child(1)]:rotate-45 [&_span:nth-child(2)]:-rotate-45 [&_span:nth-child(3)]:w-0"
-                    : ""
+                onClick={() => handleChangeLang("en")}
+                className={`w-8 h-8 rounded-full overflow-hidden border-2 transition hover:scale-110 ${currentLang === "en" ? "border-blue-500" : "border-transparent"
                   }`}
-                onClick={() => setMenuStatus(!menuStatus)}
-                aria-expanded={menuStatus}
-                aria-label="Toggle navigation"
               >
-                <div className="absolute left-1/2 top-1/2 w-6 -translate-x-1/2 -translate-y-1/2 transform">
-                  <span className="absolute block h-0.5 w-9/12 -translate-y-2 transform rounded-full bg-slate-900 transition-all duration-300"></span>
-                  <span className="absolute block h-0.5 w-6 transform rounded-full bg-slate-900 transition duration-300"></span>
-                  <span className="absolute block h-0.5 w-1/2 origin-top-left translate-y-2 transform rounded-full bg-slate-900 transition-all duration-300"></span>
-                </div>
+                <img src={en} alt="English" className="w-full h-full object-cover" />
+              </button>
+              <button
+                onClick={() => handleChangeLang("de")}
+                className={`w-8 h-8 rounded-full overflow-hidden border-2 transition hover:scale-110 ${currentLang === "de" ? "border-blue-500" : "border-transparent"
+                  }`}
+              >
+                <img src={de} alt="Deutsch" className="w-full h-full object-cover" />
               </button>
             </div>
           </div>
-        </div>
-      </div>
-      {/* Mobile Slide-out Menu */}
-      {menuStatus && (
-        <div className="lg:hidden bg-white shadow-md mt-[85px]">
-          <div className="flex flex-col items-center py-4 space-y-4">
-            <Link
-              to="/"
-              className="text-[18px] font-semibold"
-              onClick={() => setMenuStatus(false)}
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="text-[18px] font-semibold"
-              onClick={() => setMenuStatus(false)}
-            >
-              About
-            </Link>
-            <Link
-              to="/contact"
-              className="text-[18px] font-semibold"
-              onClick={() => setMenuStatus(false)}
-            >
-              Contact
-            </Link>
 
-            {/* Mobile Flags */}
-      <div className="flex gap-4 mt-3">
-  {/* ENGLISH BUTTON */}
-  <div
-    className={`p-[2px] rounded-full bg-gradient-to-r from-[#FDD253] to-[#B7FF5E] 
-      ${currentLang === "en" ? "" : "bg-transparent"}`}
-  >
-    <button
-      onClick={() => handleChangeLang("en")}
-      className="w-8 h-8 rounded-full overflow-hidden bg-white"
-    >
-      <img src={en} alt="English" className="w-full h-full object-cover" />
-    </button>
-  </div>
+          {/* Mobile Menu Button + Flags */}
+          <div className="flex lg:hidden items-center gap-3">
+            {/* Flags */}
+            <div className="flex gap-2">
+              <button
+                onClick={() => handleChangeLang("en")}
+                className={`w-10 h-7 rounded-full overflow-hidden border-2 ${currentLang === "en" ? "border-blue-500" : "border-transparent"
+                  }`}
+              >
+                <img src={en} alt="English" />
+              </button>
+              <button
+                onClick={() => handleChangeLang("de")}
+                className={`w-10 h-7 rounded-[70%] overflow-hidden border-2 ${currentLang === "de" ? "border-blue-500" : "border-transparent"
+                  }`}
+              >
+                <img src={de} alt="Deutsch" />
+              </button>
+            </div>
 
-  {/* GERMAN BUTTON */}
-  <div
-    className={`p-[2px] rounded-full bg-gradient-to-r from-[#FDD253] to-[#B7FF5E] 
-      ${currentLang === "de" ? "" : "bg-transparent"}`}
-  >
-    <button
-      onClick={() => handleChangeLang("de")}
-      className="w-8 h-8 rounded-full overflow-hidden bg-gradient-to-r from-[#FDD253] to-[#B7FF5E]"
-    >
-      <img src={de} alt="Deutsch" className="w-full h-full object-cover" />
-    </button>
-  </div>
-</div>
-
+            {/* Hamburger */}
+            <button
+              className={`relative cursor-pointer block ml-3 ${menuStatus ? "open" : ""}`}
+              onClick={() => setMenuStatus(!menuStatus)}
+              aria-expanded={menuStatus}
+              aria-label="Toggle navigation"
+            >
+              <div className="w-6 h-6 flex flex-col justify-between">
+                <span
+                  className={`block h-0.5 bg-slate-900 transition-all duration-300 ${menuStatus ? "rotate-45 translate-y-2 w-full" : "w-4/5"
+                    }`}
+                ></span>
+                <span
+                  className={`block h-0.5 bg-slate-900 transition-all duration-300 ${menuStatus ? "-rotate-45" : ""
+                    }`}
+                ></span>
+                <span
+                  className={`block h-0.5 bg-slate-900 transition-all duration-300 ${menuStatus ? "opacity-0" : "w-1/2"
+                    }`}
+                ></span>
+              </div>
+            </button>
           </div>
         </div>
+      </div>
+      {/* Mobile Sidebar (Slide-in) */}
+      <div
+        className={`fixed top-0 left-0 h-full w-74 bg-[#FFFBDB] shadow-lg transform transition-transform duration-300 z-40 ${menuStatus ? "translate-x-0" : "-translate-x-full"
+          }`}
+      >
+        <div className="flex flex-col h-full pt-24 px-6 space-y-6">
+          <Link
+            to="/"
+            className={`text-lg sm:text-xl font-semibold ${location.pathname === "/" ? "text-[#fcdb7c]" : "text-[#5EA308]"
+              }`}
+            onClick={() => setMenuStatus(false)}
+          >
+            {t("nav.home")}
+          </Link>
+          <Link
+            to="/about"
+            className={`text-lg sm:text-xl font-semibold ${location.pathname === "/about" ? "text-[#fcdb7c]" : "text-[#5EA308]"
+              }`}
+            onClick={() => setMenuStatus(false)}
+          >
+            {t("nav.about")}
+          </Link>
+          <Link
+            to="/contact"
+            className={`text-lg sm:text-xl font-semibold ${location.pathname === "/contact" ? "text-[#fcdb7c]" : "text-[#5EA308]"
+              }`}
+            onClick={() => setMenuStatus(false)}
+          >
+            {t("nav.contact")}
+          </Link>
+        </div>
+      </div>
+      {/* Overlay when menu is open */}
+      {menuStatus && (
+        <div
+          className="fixed inset-0 bg-black/10 z-10"
+          onClick={() => setMenuStatus(false)}
+        ></div>
       )}
     </div>
   );

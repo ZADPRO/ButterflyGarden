@@ -8,12 +8,10 @@
   font-style: normal;
 }
 
-/* Apply globally */
 body {
   font-family: 'Bau Asem', 'Montagu Slab', sans-serif;
 }
 
-/* Optional: Use class for custom use */
 .newclass {
   font-family: 'Bau Asem', sans-serif;
 }

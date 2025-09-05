@@ -1,36 +1,13 @@
 import React, { useState } from "react";
 import { LocationEdit, Mail, Phone } from "lucide-react";
-import { FaFacebookF, FaInstagram, FaEnvelope } from "react-icons/fa";
+import img1 from '../../assets/About/HOME1.png'
+// import { FaFacebookF, FaInstagram, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import img from '../../assets/About/HOME1.png'
+import img from "../../assets/About/HOME1_MOBILE.png";
+
 const Contact: React.FC = () => {
   const { t } = useTranslation("global");
-
-  const socialLinks = [
-    {
-      name: t("contact.orbitFacebook"),
-      icon: <FaFacebookF size={18} color="#1877F2" />,
-      url: "https://facebook.com",
-      borderColor: "#1877F2",
-      angle: 0,
-    },
-    {
-      name: t("contact.orbitInstagram"),
-      icon: <FaInstagram size={18} color="#E4405F" />,
-      url: "https://instagram.com",
-      borderColor: "#E4405F",
-      angle: 120,
-    },
-    {
-      name: t("contact.orbitEmail"),
-      icon: <FaEnvelope size={18} color="#0A66C2" />,
-      url: "https://linkedin.com",
-      borderColor: "#0A66C2",
-      angle: 240,
-    },
-  ];
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -38,8 +15,6 @@ const Contact: React.FC = () => {
     subject: "",
     message: "",
   });
-
-  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -51,109 +26,121 @@ const Contact: React.FC = () => {
     e.preventDefault();
     const { name, email, phone, subject, message } = formData;
 
-    const mailto = `https://mail.google.com/mail/?view=cm&fs=1&to=mavenacademy.switzerland@gmail.com.com&su=${encodeURIComponent(
+    const mailto = `https://mail.google.com/mail/?view=cm&fs=1&to=mavenacademy.switzerland@gmail.com&su=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`
     )}`;
     window.open(mailto, "_blank");
-    setShowSuccess(true);
+  };
 
-    setTimeout(() => setShowSuccess(false), 3000);
+  // Animation variants - all slide from left to right
+  const slideIn = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 },
   };
 
   return (
     <div className="bg-[#fefdf8]">
-    <section className="min-h-[70vh] flex items-center justify-center py- w-full">
-  <div
-    style={{
-      backgroundImage: `url('${img}')`,
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "60% center", // Shift image slightly to the right
-    }}
-    className="w-full grid md:grid-cols-2 bg-[#FFFBDB] gap-0 items-center"
-  >
-    {/* Left Section (now just spacer) */}
-    <motion.div
-      initial={{ opacity: 0, x: -50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
-      className="order-2 md:order-1 h-[700px] hidden md:block"
-      viewport={{ once: true, amount: 0.5 }}
+      {/* HERO SECTION */}
+      <section className="min-h-[70vh] flex items-center justify-center mt-[-10px] lg:mt-[-10px] w-full">
+  <div className="w-full grid md:grid-cols-2 lg:bg-[#FFFBDB] bg-[#E3E9A3]  gap-0 items-center">
+
+    {/* Desktop background (unchanged) */}
+    <div
+      className="hidden md:block h-[700px] order-2 md:order-1 w-full"
+      style={{
+        backgroundImage: `url('${img1}')`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "20% center",
+      }}
     />
 
-    {/* Right: Text Section */}
+    {/* Text content (always first on mobile, second on desktop) */}
     <motion.div
-      initial={{ opacity: 0, x: 50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      className="order-1 md:order-2 flex flex-col justify-center h-[700px] p-8"
-      viewport={{ once: true, amount: 0.5 }}
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      viewport={{ once: true, amount: 0.3 }}
+      className="order-1 md:order-2 flex flex-col justify-center mt-20 h-auto px-6 sm:px-10 lg:px-20 py-10"
     >
       <h1
-        className="text-5xl font-extrabold text-[#5EA308]"
-        style={{
-          fontFamily: "Inter, sans-serif",
-          fontStyle: "italic",
-          paddingLeft: "140px",
-          paddingRight: "140px",
-          textAlign: "justify",
-        }}
+        className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#5EA308] italic leading-snug"
+        style={{ fontFamily: "Inter, sans-serif", fontStyle: "italic" }}
       >
-        {t("contac.contactTitle")}
+       {t("contac.contactTitle")}
       </h1>
       <p
-        className="text-[#555555] text-xl mt-5 ml-38 mr-10 leading-relaxed"
-        style={{
-          fontFamily: "Inter, sans-serif",
-          paddingLeft: "px",
-          paddingRight: "140px",
-          textAlign: "justify",
-        }}
+        className="text-[#555555] text-base sm:text-lg lg:text-xl mt-5 leading-relaxed mb-0 text-justify"
+        style={{ fontFamily: "Inter, sans-serif" }}
       >
-        {t("contac.line1")}
+         {t("contac.line1")}
       </p>
     </motion.div>
+
+    {/* Mobile-only background image (new) */}
+    <div
+      className="block md:hidden  order-3 w-full min-h-[400px] mt-[-42px]"
+      style={{
+        backgroundImage: `url('${img}')`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "20% center", // shifts image toward the right
+      }}
+    />
   </div>
 </section>
 
-      <section className="py-16 bg-[#5EA308]">
-        <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* LEFT SIDE FORM */}
+      {/* CONTACT FORM & CARDS */}
+      <section className="py-12 sm:py-16 bg-[#5EA308]">
+        <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
+          {/* LEFT: FORM */}
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            variants={slideIn}
+            initial="hidden"
+            whileInView="visible"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4" style={{ fontFamily: "Inter, sans-serif", fontStyle: "italic" }}>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 italic"style={{ fontFamily: "Inter, sans-serif", fontStyle: "italic" }}>
               {t("contact.contactTitle")}
             </h2>
-            <p className="text-white mb-8 max-w-md text-sm sm:text-base" style={{ fontFamily: "Inter, sans-serif", fontSize: "20px" }}>
+            <p className="text-white mb-8 text-sm sm:text-base lg:text-lg" style={{ fontFamily: "Inter, sans-serif", fontSize: "20px" }}>
               {t("contact.contactSubtitle")}
             </p>
 
-            <form className="space-y-5 text-[#FFFBDB]">
+            <form
+              className="space-y-4 text-[#FFFBDB]"
+              onSubmit={handleSubmit}
+            >
               <input
                 type="text"
+                name="name"
+                onChange={handleChange}
                 placeholder={t("contact.form.name")}
-                className="w-full border border-[#FFFBDB] bg-transparent rounded-lg p-3 text-[#FFFBDB] placeholder-[#FFFBDB] text-sm sm:text-base"
+                className="w-full border border-[#FFFBDB] bg-transparent rounded-lg p-3 text-sm sm:text-base placeholder-[#FFFBDB]"
               />
               <input
                 type="email"
+                name="email"
+                onChange={handleChange}
                 placeholder={t("contact.form.email")}
-                className="w-full border border-[#FFFBDB] bg-transparent rounded-lg p-3 text-[#FFFBDB] placeholder-[#FFFBDB] text-sm sm:text-base"
+                className="w-full border border-[#FFFBDB] bg-transparent rounded-lg p-3 text-sm sm:text-base placeholder-[#FFFBDB]"
               />
               <input
                 type="text"
+                name="subject"
+                onChange={handleChange}
                 placeholder={t("contact.form.subject")}
-                className="w-full border border-[#FFFBDB] bg-transparent rounded-lg p-3 text-[#FFFBDB] placeholder-[#FFFBDB] text-sm sm:text-base"
+                className="w-full border border-[#FFFBDB] bg-transparent rounded-lg p-3 text-sm sm:text-base placeholder-[#FFFBDB]"
               />
               <textarea
+                name="message"
+                onChange={handleChange}
                 rows={4}
                 placeholder={t("contact.form.message")}
-                className="w-full border border-[#FFFBDB] bg-transparent rounded-lg p-3 text-[#FFFBDB] placeholder-[#FFFBDB] text-sm sm:text-base"
+                className="w-full border border-[#FFFBDB] bg-transparent rounded-lg p-3 text-sm sm:text-base placeholder-[#FFFBDB]"
               ></textarea>
               <button
                 type="submit"
@@ -162,79 +149,53 @@ const Contact: React.FC = () => {
                 {t("contact.form.button")}
               </button>
             </form>
-
           </motion.div>
 
-          {/* RIGHT SIDE CARDS WITH SAME GRADIENT BORDER */}
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="flex flex-col justify-end gap-6 md:col-span-1 w-full md:w-auto"
-          >
-            <motion.div
-              initial={{ opacity: 0, x: 80 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05, rotate: 1 }}
-              className="relative p-[2px] rounded-3xl bg-gradient-to-r from-[#FDD253] to-[#B7FF5E]"
-            >
-              <div className="bg-[#FFFBDB] rounded-3xl p-6 h-full text-center border-2 border-dashed border-transparent">
-                <div className="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-gradient-to-br from-[#FDD253] to-[#B7FF5E]">
-                  <Mail className="text-[#555] w-6 h-6" />
+          {/* RIGHT: CARDS */}
+          <div className="flex flex-col gap-6"style={{ fontFamily: "Inter, sans-serif" }}>
+            {[ 
+              {
+                icon: <Mail className="text-[#555] w-6 h-6" />,
+                title: t("contact.cardEmailTitle"),
+                text: t("contact.cardEmailText"),
+              },
+              {
+                icon: <Phone className="text-[#555] w-6 h-6" />,
+                title: t("contact.cardPhoneTitle"),
+                text: t("contact.cardPhoneText"),
+              },
+              {
+                icon: <LocationEdit className="text-[#555] w-6 h-6" />,
+                title: t("contact.cardAddressTitle"),
+                text: "",
+              },
+            ].map((card, idx) => (
+              <motion.div
+                key={idx}
+                variants={slideIn}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.6, delay: idx * 0.2 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                className="relative p-[2px] rounded-3xl bg-gradient-to-r from-[#FDD253] to-[#B7FF5E]"
+              >
+                <div className="bg-[#FFFBDB] rounded-3xl p-6 h-full text-center">
+                  <div className="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-gradient-to-br from-[#FDD253] to-[#B7FF5E]">
+                    {card.icon}
+                  </div>
+                  <h4 className="mt-4 text-lg sm:text-xl font-bold text-[#555555]">
+                    {card.title}
+                  </h4>
+                  {card.text && (
+                    <p className="text-gray-600 text-sm sm:text-base mt-2">
+                      {card.text}
+                    </p>
+                  )}
                 </div>
-
-                <h4 className="mt-4 text-xl font-bold text-[#555555]" style={{ fontFamily: "Inter, sans-serif" }}>
-                  {t("contact.cardEmailTitle")}
-                </h4>
-                <p className="text-gray-600 text-sm mt-2 break-words" style={{ fontFamily: "Inter, sans-serif", fontSize: "19px" }}>
-                  {t("contact.cardEmailText")}
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Phone Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 80 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05, rotate: 1 }}
-              className="relative p-[2px] rounded-3xl bg-gradient-to-r from-[#FDD253] to-[#B7FF5E]"
-            >
-              <div className="bg-[#FFFBDB] rounded-3xl p-6 h-full text-center border-2 border-dashed border-transparent">
-                <div className="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-gradient-to-br from-[#FDD253] to-[#B7FF5E]">
-                  <Phone className="text-[#555] w-6 h-6" />
-                </div>
-                <h4 className="mt-4 text-xl font-bold text-[#555555]" style={{ fontFamily: "Inter, sans-serif" }}>
-                  {t("contact.cardPhoneTitle")}
-                </h4>
-                <p className="text-gray-600 text-sm mt-2" style={{ fontFamily: "Inter, sans-serif", fontSize: "19px" }}>
-                  {t("contact.cardPhoneText")}
-                </p>
-              </div>
-            </motion.div>
-            {/* Address Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 80 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05, rotate: 1 }}
-              className="relative p-[2px] rounded-3xl bg-gradient-to-r from-[#FDD253] to-[#B7FF5E]"
-            >
-              <div className="bg-[#FFFBDB] rounded-3xl p-6 h-full text-center border-2 border-dashed border-transparent">
-                <div className="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-gradient-to-br from-[#FDD253] to-[#B7FF5E]">
-                  <LocationEdit className="text-[#555] w-6 h-6" />
-                </div>
-                <h4 className="mt-4 text-xl font-bold text-[#555555]" style={{ fontFamily: "Inter, sans-serif" }}>
-                  {t("contact.cardAddressTitle")}
-                </h4>
-              </div>
-            </motion.div>
-          </motion.div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
@@ -242,5 +203,3 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
-// -----------------------------------------
-// =========================================
