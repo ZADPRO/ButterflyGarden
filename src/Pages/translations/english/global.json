@@ -43,7 +43,7 @@
   "ourPreschool": {
     "title": "Our Pre-School",
     "t1": "(Ages 3-6)",
-    "description": "Butterfly Garden is a bilingual pre-school for tiny tots aged 3 to 6. Using the Montessori method of schooling we focus on hands-on and experience-based learning. This allows the  children to learn and develop at their own pace, just the way a catarpillar transforms into a colourful butterfly. We believe that every child is unique and deserves a chance to thrive in a multicultural environment.",
+    "description": "Butterfly Garden is a bilingual pre-school for tiny tots aged 3 to 6. Using the Bilingual method of schooling we focus on hands-on and experience-based learning. This allows the  children to learn and develop at their own pace, just the way a catarpillar transforms into a colourful butterfly. We believe that every child is unique and deserves a chance to thrive in a multicultural environment.",
      "title1": "After School Activity Centre",
     "t":"(Ages 3-12)",
     "desc": "Butterfly Garden is an after-school activity centre providing various activities for small and older children in the ages 3 to 12. We believe that each child has unique interests and abilities. We provide the space and the encouragement the children need to grow in a multicultural world and allow them to express themselves in their own way. At Butterfly Garden, children can explore their interests and learn new skills that are relevant for this day and age.",
@@ -123,7 +123,7 @@
     "reasons": [
       {
         "title": "Pre-School (Ages 3-6)",
-        "desc": "Montessori-inspired, hands-on learning designed to build strong foundations."
+        "desc": "Bilingual-inspired, hands-on learning designed to build strong foundations."
       },
       {
         "title": "After-School (Ages 3-12)",
@@ -211,7 +211,7 @@
   },
   "about": {
     "title": "About Us",
-    "tagline": "Butterfly Garden is a bilingual school for children aged 3 to 12. Every child deserves the chance to grow like a butterfly by discovering their own interests and thriving in a multicultural world. Our school follows the Montessori approach, and focuses on self-directed, hands-on learning. We offer classes in both English and German, with a wide and diverse range of subjects."    
+    "tagline": "Butterfly Garden is a bilingual school for children aged 3 to 12. Every child deserves the chance to grow like a butterfly by discovering their own interests and thriving in a multicultural world. Our school follows the bilingual approach, and focuses on self-directed, hands-on learning. We offer classes in both English and German, with a wide and diverse range of subjects."    
    },
   "aboutSection": {
     "label": "Our Approach",

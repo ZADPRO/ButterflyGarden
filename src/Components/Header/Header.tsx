@@ -10,11 +10,15 @@ const Header: React.FC = () => {
   const location = useLocation();
   const [menuStatus, setMenuStatus] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+   const [_loading, setLoading] = useState(false);
   const { t, i18n } = useTranslation("global");
   const currentLang = i18n.language;
 
   const handleChangeLang = (lang: string) => {
+  
+     setLoading(true);
     i18n.changeLanguage(lang);
+    setLoading(false);
   };
 
   const isNoScrollEffect =
@@ -31,6 +35,17 @@ const Header: React.FC = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isNoScrollEffect]);
+
+   // Auto-close menu on route change & scroll to top
+  useEffect(() => {
+    setMenuStatus(false); // close menu
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); // scroll to top
+  }, [location.pathname]);
+
+  // Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuStatus ? "hidden" : "auto";
+  }, [menuStatus]);
 
   const navLinkClass =
     "text-lg md:text-xl cursor-pointer font-bold underline-animation transition duration-300 ease-in-out relative after:content-[''] after:block after:h-[2px] after:w-0 hover:after:w-full after:bg-[#fcdb7c] after:transition-all after:duration-300";
@@ -100,14 +115,14 @@ const Header: React.FC = () => {
             <div className="flex gap-2">
               <button
                 onClick={() => handleChangeLang("en")}
-                className={`w-10 h-7 rounded-full overflow-hidden border-2 ${currentLang === "en" ? "border-blue-500" : "border-transparent"
+                className={`w-8 h-7 rounded-full overflow-hidden border-2 ${currentLang === "en" ? "border-blue-500" : "border-transparent"
                   }`}
               >
                 <img src={en} alt="English" />
               </button>
               <button
                 onClick={() => handleChangeLang("de")}
-                className={`w-10 h-7 rounded-[70%] overflow-hidden border-2 ${currentLang === "de" ? "border-blue-500" : "border-transparent"
+                className={`w-8 h-7 rounded-[70%] overflow-hidden border-2 ${currentLang === "de" ? "border-blue-500" : "border-transparent"
                   }`}
               >
                 <img src={de} alt="Deutsch" />

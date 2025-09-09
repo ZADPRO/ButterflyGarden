@@ -12,6 +12,7 @@ interface Point {
 }
 
 interface Card {
+  
   id: string;
   title: string;
   text: string;

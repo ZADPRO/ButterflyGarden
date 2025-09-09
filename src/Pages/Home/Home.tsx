@@ -109,7 +109,7 @@ const HomePage: React.FC = () => {
           <div className="text-center md:text-left md:w-1/2 mb-10 md:mb-14">
             <h1
               className="
-                  text-5xl text-[54px] sm:text-4xl md:text-5xl 
+                text-5xl text-[54px] sm:text-4xl md:text-5xl 
                 px-5 pt-[5px] pb-[35px] 
                 font-['Bau Asem'] 
                 text-transparent 
@@ -400,47 +400,48 @@ const HomePage: React.FC = () => {
 
       <div className="min-h-[60vh] bg-[#FFFBDB]">
         {/* First Section */}
-        <section className="min-h-[60vh] flex items-center justify-center px-4 py-8 sm:px-6">
-          <div className="max-w-7xl grid md:grid-cols-2 gap-0 items-center mb-20">
-            {/* Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="order-1 md:order-1 flex flex-col justify-center bg-[#5EA308] px-4 py-6 sm:px-6 sm:py-8 h-auto md:h-[700px]"
-              viewport={{ once: true, amount: 0.5 }}
-            >
-              <h2
-                className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center sm:text-left italic"
-                style={{ fontFamily: "Inter, sans-serif" }}
-              >
-                {t("ourPreschool.title")}
-                <br />
-                {t("ourPreschool.t1")}
-              </h2>
-              <p
-                className="text-white text-base sm:text-lg md:text-xl mt-4 leading-relaxed text-center sm:text-left"
-                style={{ fontFamily: "Inter, sans-serif", textAlign: "justify" }}
-              >
-                {t("ourPreschool.description")}
-              </p>
-            </motion.div>
+        <section className="min-h-[60vh] flex items-center justify-center px-4 py-8 mt-[-0px] sm:px-6">
+  <div className="max-w-7xl grid md:grid-cols-2 gap-0 items-center mb-20">
+    {/* Content */}
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      className="order-1 md:order-1 flex flex-col justify-center bg-[#5EA308] px-4 py-6 sm:px-6 sm:py-8 h-auto md:h-[700px]"
+      viewport={{ once: true, amount: 0.5 }}
+    >
+      <h2
+        className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center sm:text-left italic"
+        style={{ fontFamily: "Inter, sans-serif" }}
+      >
+        {t("ourPreschool.title")}
+        <br />
+        {t("ourPreschool.t1")}
+      </h2>
+      <p
+        className="text-white text-base sm:text-lg md:text-xl mt-4 leading-relaxed text-center sm:text-left"
+        style={{ fontFamily: "Inter, sans-serif", textAlign: "justify" }}
+      >
+        {t("ourPreschool.description")}
+      </p>
+    </motion.div>
 
-            {/* Image - hidden on mobile */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="hidden sm:flex order-2 justify-center items-center h-full"
-              viewport={{ once: true, amount: 0.5 }}
-            >
-              <img src={img0} alt="Preschool" className="w-full h-full object-cover" />
-            </motion.div>
-          </div>
-        </section>
+    {/* Image - hidden on mobile */}
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}   
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      className="hidden sm:flex order-2 justify-center items-center h-full"
+      viewport={{ once: true, amount: 0.5 }}
+    >
+      <img src={img0} alt="Preschool" className="w-full h-full object-cover" />
+    </motion.div>
+  </div>
+</section>
+
 
         {/* Second Section */}
-        <section className="min-h-[60vh] flex items-center justify-center px-4 py-8 sm:px-6 mt-[-100px]">
+        <section className="min-h-[60vh] flex items-center justify-center px-4 py-8 sm:px-6 mt-[-114px]">
           <div className="max-w-7xl grid md:grid-cols-2 gap-0 items-center mb-20">
             {/* Content */}
             <motion.div
@@ -468,7 +469,7 @@ const HomePage: React.FC = () => {
 
             {/* Image - hidden on mobile */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="hidden sm:flex order-1 justify-center items-center h-full"
@@ -515,7 +516,7 @@ const HomePage: React.FC = () => {
 
             {/* Image - hidden on mobile */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="hidden sm:flex order-2 justify-center items-center h-full"
@@ -526,9 +527,9 @@ const HomePage: React.FC = () => {
           </div>
         </section>
       </div>
-      <section className="py-26 mt-0 bg-[#5EA308]">
+      <section className="py-26 mt-[-20px] bg-[#5EA308]">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-16" style={{ fontFamily: "Inter, sans-serif", fontStyle: "italic" }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-[-22px] mb-16" style={{ fontFamily: "Inter, sans-serif", fontStyle: "italic" }}>
             <Trans
               i18nKey="whyChooseSection.heading"
               ns="global"
