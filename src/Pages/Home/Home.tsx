@@ -161,7 +161,7 @@ const HomePage: React.FC = () => {
     text-[#1B5AC1] font-bold 
     text-center lg:text-left 
     mb-6 mt-5 
-    lg:pl-[200px]
+    lg:pl-[100px]
     tracking-[0.3em]
   "
           style={{
